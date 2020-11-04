@@ -11,4 +11,5 @@ class AddUserCustomFieldsToUsers < ActiveRecord::Migration[6.0]
     add_column :users, :memo, :string
     add_column :users, :slug, :string
   end
+
 end

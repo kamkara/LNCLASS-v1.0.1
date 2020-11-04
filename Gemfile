@@ -35,7 +35,7 @@ gem 'jquery-rails'
 
 ################  MEMBERSHIP  ################
 gem 'devise', '~> 4.7', '>= 4.7.3'
-
+gem 'devise_invitable', '~> 2.0', '>= 2.0.2'
 
 
 # Reduces boot times through caching; required in config/boot.rb
