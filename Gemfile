@@ -29,6 +29,8 @@ gem 'turbolinks', '~> 5'
 ################  STYLES  ################
 gem 'tailwindcss', '~> 1.0', '>= 1.0.3'
 gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'bootstrap_form', '~> 4.5'
+gem 'bootstrap-datepicker-rails', '~> 1.9', '>= 1.9.0.1'
 
 ################  JS  ################
 gem 'jquery-rails'

@@ -21,3 +21,12 @@ import "../css/application.css"
 //= require jquery3
 //= require popper
 //= require bootstrap
+
+//= require bootstrap-datepicker
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
+
+
+
+import "@fortawesome/fontawesome-free/js/all";
