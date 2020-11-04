@@ -26,8 +26,15 @@ gem 'turbolinks', '~> 5'
 # gem 'image_processing', '~> 1.2'
 
 
-################  STTYLES  ################
+################  STYLES  ################
 gem 'tailwindcss', '~> 1.0', '>= 1.0.3'
+gem 'bootstrap', '~> 5.0.0.alpha1'
+
+################  JS  ################
+gem 'jquery-rails'
+
+################  MEMBERSHIP  ################
+gem 'devise', '~> 4.7', '>= 4.7.3'
 
 
 
