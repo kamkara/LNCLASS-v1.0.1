@@ -8,8 +8,7 @@ class User < ApplicationRecord
 
 #RELATIONS
   has_many :courses, dependent: :destroy
-  #has_many :materials
-  has_many :levels
+  has_many :materials
  # has_many :exercices, through: :courses
   #has_many :schools
 
@@ -27,4 +26,13 @@ class User < ApplicationRecord
   #UNIQUENESS
    validates :contact,
              :email, uniqueness: true
+
+
+             #SLUG
+  extend FriendlyId
+    friendly_id :username, use: :slugged
+
+  def should_generate_new_friendly_id?
+    username_changed?
+  end
 end

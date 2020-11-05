@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_11_05_101621) do
+=======
+ActiveRecord::Schema.define(version: 2020_11_05_095636) do
+>>>>>>> Material
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -41,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_11_05_101621) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+<<<<<<< HEAD
   create_table "levels", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.string "slug"
@@ -50,6 +55,8 @@ ActiveRecord::Schema.define(version: 2020_11_05_101621) do
     t.index ["user_id"], name: "index_levels_on_user_id"
   end
 
+=======
+>>>>>>> Material
   create_table "materials", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.string "cycle"
@@ -100,6 +107,9 @@ ActiveRecord::Schema.define(version: 2020_11_05_101621) do
   end
 
   add_foreign_key "courses", "users"
+<<<<<<< HEAD
   add_foreign_key "levels", "users"
+=======
+>>>>>>> Material
   add_foreign_key "materials", "users"
 end

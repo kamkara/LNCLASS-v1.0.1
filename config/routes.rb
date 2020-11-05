@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :levels
+=======
+  resources :materials
+>>>>>>> Material
   resources :courses
   devise_for :users, controllers: { registrations: 'users/registrations' }
 
