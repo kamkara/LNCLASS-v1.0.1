@@ -1,5 +1,6 @@
-class Course < ApplicationRecord
+class Material < ApplicationRecord
   belongs_to :user
+
 
   #SLUG
   extend FriendlyId
@@ -8,5 +9,4 @@ class Course < ApplicationRecord
   def should_generate_new_friendly_id?
     title_changed?
   end
-
 end

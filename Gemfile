@@ -35,6 +35,9 @@ gem 'bootstrap-datepicker-rails', '~> 1.9', '>= 1.9.0.1'
 ################  JS  ################
 gem 'jquery-rails'
 
+################  URLS  ################
+gem 'friendly_id', '~> 5.4'
+
 ################  FORMS  ################
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 
