@@ -35,9 +35,14 @@ gem 'bootstrap-datepicker-rails', '~> 1.9', '>= 1.9.0.1'
 ################  JS  ################
 gem 'jquery-rails'
 
+################  FORMS  ################
+gem 'simple_form', '~> 5.0', '>= 5.0.3'
+
 ################  MEMBERSHIP  ################
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'devise_invitable', '~> 2.0', '>= 2.0.2'
+
+
 
 
 # Reduces boot times through caching; required in config/boot.rb
