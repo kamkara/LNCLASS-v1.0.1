@@ -17,11 +17,8 @@ class User < ApplicationRecord
 
   #PRESENTE
   validates :username,
-            :contact,
-            :email,
-            :level,
-            :school_name,
-            :role, presence: true
+            :memo,
+            :email, presence: true
 
 
   #UNIQUENESS
