@@ -23,7 +23,7 @@ gem 'turbolinks', '~> 5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+ gem 'image_processing', '~> 1.2'
 
 
 ################  STYLES  ################
@@ -63,6 +63,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :test do
@@ -75,3 +78,46 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+
+
+
+#RESOURCES   FORMS
+#https://webypress.fr/meilleurs-formulaires-inscription-bootstrap-gratuits-2019/
+
+
+#RESOURCES DESIGN
+#tailwind css section ICON
+#https://tailwindcss.com/resources#icons
+
+#IMAGES DRAW
+#https://undraw.co/ AND https://undraw.co/illustrations
+
+#STACK IMAGES
+#https://unsplash.com/
+
+#ICON HEROICONS
+#https://github.com/tailwindlabs/heroicons
+
+#ICON ZONDICONS
+#http://www.zondicons.com/icons.html
+
+#HERO PATTERN
+#http://www.heropatterns.com/
+
+
+#RESOURCES
+#https://hackademy.io/tutoriel-videos/nouveaute-rails-41-active-record-methode-enum
+
+#SCOLARITE FORMAT
+#https://www.pdftron.com/blog/rails/how-to-generate-pdf-with-ruby-on-rails/
+#http://rails-generate-pdf.herokuapp.com/invoices/1
+#https://github.com/PDFTron/rails-generate-pdf
+#https://www.synbioz.com/blog/tech/generation-de-pdf
+#https://www.grzegorowski.com/using-prawn-gem-for-generating-pdfs-in-rails-5
+#https://www.grzegorowski.com/using-prawn-gem-for-generating-pdfs-in-rails-5
+
+
+#UUUID
+#https://itnext.io/using-uuids-to-your-rails-6-application-6438f4eeafdf
