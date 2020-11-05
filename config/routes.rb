@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :levels
   resources :courses
   devise_for :users, controllers: { registrations: 'users/registrations' }
 
