@@ -1,4 +1,4 @@
-<%= form_with(model: course, local: true) do |form| %>
+<%= form_with(model: course, local: true) do |f| %>
   <% if course.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
@@ -11,31 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+  <div class="form-inputs">
+      <%= f.text_field :title, label: 'Titre:', placeholder:"Le titre du Cours" %>
+      <%= f.rich_text_area :content, label: 'Contenu:', class: "customized-min-height", placeholder: "Le contenu du cours" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
+    <div class="row my-2">
+      <div class="col-5  col-md-3 col-lg-3">
+        <div class="input-form">
+          <span class="select">
+            <%= f.select :material_id,
+              @materials.map { |m| [m.title, m.id] },
+              placeholder:"la matiere",
+               hide_label: true %>
 
+          </span>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-3">
+        <div class="input-form">
+          <span class="select">
+            <%= f.select :level_id,
+              @levels.map { |l| [l.title, l.id] },
+              placeholder:"Niveau",
+               hide_label: true %>
+          </span>
+        </div>
+      </div>
+    </div>
 
-
-  <div class="field">
-    <%= form.label :material_id %>
-    <%= form.text_field :material_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :level_id %>
-    <%= form.text_field :level_id %>
-  </div>
-
-
-
-  <div class="actions">
-    <%= form.submit class:"btn btn-primary" %>
-  </div>
+    <div class="form-actions">
+      <%= f.submit "Créer le Cours",  class: "btn btn-primary" %>
+    </div>
 <% end %>

@@ -5,5 +5,6 @@ class HomeController < ApplicationController
 
   def index
     @courses = Course.all
+    @materials = Material.all
   end
 end

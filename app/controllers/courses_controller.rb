@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_materials, only: [:index, :show, :new, :edit, :create]
+  before_action :find_levels, only: [:index, :show, :new, :edit, :create]
   before_action :set_course, only: [:show, :edit, :update, :destroy]
 
   # GET /courses
@@ -54,6 +56,13 @@ class CoursesController < ApplicationController
       @course = Course.friendly.find(params[:id])
     end
 
+    def find_materials
+      @materials = Material.all
+    end
+
+    def find_levels
+      @levels = Level.all
+    end
     # Only allow a trusted parameter "white list" through.
     def course_params
       params.require(:course).permit(:title, :content, :author, :memo, :material_id, :level_id)

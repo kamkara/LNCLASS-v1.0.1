@@ -27,11 +27,11 @@
 						</span>
 						<!-- course material-->
 						<p class="font-thin text-sm hover:bg-white hover:underline"> · Prof de
-							<span class="capitalize"><%= course.material.title %></span>
+							<span class="capitalize"><%= course.material_id.titleize %></span>
 						</p>
 						<!--  add author punch line-->
 						<p class="font-bold text-sm hover:bg-white">
-							<%= course.user.punchline %>
+							<%= course.memo %>
 						</p>
 					</div>
 				<% end %>
