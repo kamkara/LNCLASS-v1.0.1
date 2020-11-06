@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+  get 'tables_class/index'
   resources :levels
   resources :materials
   resources :courses
