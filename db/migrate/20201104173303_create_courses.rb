@@ -5,11 +5,8 @@ class CreateCourses < ActiveRecord::Migration[6.0]
       t.text :content
       t.string :author
       t.string :memo
-      t.string :material_id
-      t.string :level_id
       t.string :slug
       t.references :user, null: false, foreign_key: true,  type: :uuid
-
       t.timestamps
     end
   end

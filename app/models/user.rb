@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   #PRESENTE
   validates :username,
-            :memo,
+
             :email, presence: true
 
 
