@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :courses, dependent: :destroy
   has_many :materials
   has_many :levels
- # has_many :exercices, through: :courses
+  has_many :exercices, through: :courses
   #has_many :schools
 
 

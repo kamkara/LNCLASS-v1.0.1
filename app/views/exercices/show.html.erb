@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @exercice.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @exercice.content %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @exercice.author %>
+</p>
+
+<p>
+  <strong>Search:</strong>
+  <%= @exercice.search %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @exercice.slug %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @exercice.user_id %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @exercice.course_id %>
+</p>
+
+<%= link_to 'Edit', edit_exercice_path(@exercice) %> |
+<%= link_to 'Back', exercices_path %>
