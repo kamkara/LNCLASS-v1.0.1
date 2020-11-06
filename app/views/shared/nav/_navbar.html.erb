@@ -24,7 +24,7 @@
             <!-- user avatar/!-->
             <li class="nav-item active">
               <%= link_to edit_user_registration_path(@user), class: "m-links nav-link capitalize" do %>
-                 <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <i class="fas fa-user-circle"></i>
                  <%= current_user.username %>
               <% end %>
             </li>
@@ -33,7 +33,7 @@
 
               <li class="nav-item active">
                 <%= link_to root_path, class: "m-links nav-link " do %>
-                 <i class="fa fa-plus-circle" aria-hidden="true"></i>TablesClass
+                 <i class="fas fa-users"></i> TablesClass
                 <% end %>
               </li>
               <li class="nav-item active">
