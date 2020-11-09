@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
 
+  get 'table/index'
   resources :courses do
     resources :exercices, only: [:index, :new, :create]
   end
   resources :exercices
-  get 'tables_class/index'
   resources :levels
   resources :materials
   devise_for :users, controllers: { registrations: 'users/registrations' }
