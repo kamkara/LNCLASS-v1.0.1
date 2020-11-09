@@ -10,11 +10,8 @@
   </head>
 
   <body class="md:bg-gray-200">
-  <div class="md:mt-6">
-    <%= render "tables_class/shared/nav/table" %>
-    <%= render "layouts/shared/header/notices" %>
     <%= yield %>
-  </div>
+    <%= render "layouts/shared/header/notices" %>
 
     <%= render "layouts/shared/footer/footer_links" %>
   </body>
