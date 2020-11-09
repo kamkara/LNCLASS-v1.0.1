@@ -11,13 +11,12 @@ class User < ApplicationRecord
   has_many :materials
   has_many :levels
   has_many :exercices, through: :courses
-  #has_many :schools
+
 
 
 
   #PRESENTE
   validates :username,
-
             :email, presence: true
 
 

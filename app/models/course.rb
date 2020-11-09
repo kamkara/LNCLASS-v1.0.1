@@ -1,9 +1,9 @@
 class Course < ApplicationRecord
   belongs_to :user
   #has_rich_text :content
-  has_many :exercices
   belongs_to :level
   belongs_to :material
+  has_many :exercices
 
 
   #VALIDATIONS
