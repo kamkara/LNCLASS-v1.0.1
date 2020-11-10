@@ -1,20 +1,18 @@
 
-
 <%= bootstrap_form_for([@course, @course.exercices.build], remote: true) do |f| %>
 
-
-
 <div class="form-control">
+  <%= f.text_field :title, placeholder:"Titre de la fiche pratique", hide_label:true %>
+</div>
 
-    <%= f.text_field :title, label:"Le titre du sujet", placeholder:"Reference du sujet", id:"exerciceTitle" %>
-  </div>
+<div class="form-control mt-1">
+  <%= f.rich_text_area :content, hide_label:true,
+   class:"customized-min-height", placeholder: "Le contenu de la pratique...",
+   id:"exercicesContent" %>
+</div>
 
-  <div class="form-control">
-
-    <%= f.rich_text_area :content, label: 'Contenu:', class:"customized-min-height", placeholder: "Le contenu du cours", id:"exerciceContent" %>
-  </div>
-
-  <div class="actions mt-2">
-    <%= f.submit "Ajoute Exercice", class:"btn btn-outline-primary font-bold" %>
-  </div>
+<div class="actions mt-2">
+  <%= f.submit "Créer la fiche",
+  class:"btn btn-outline-primary font-bold" %>
+</div>
 <% end %>

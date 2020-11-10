@@ -1,6 +1,6 @@
 class ExercicesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_course, only: [:new, :index, :create]
+  before_action :set_course, only: [:new, :update, :edit, :create]
   before_action :set_exercice, only: [:show, :edit, :update, :destroy]
 
   # GET /exercices

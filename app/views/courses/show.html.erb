@@ -2,8 +2,9 @@
 
 
 <div class="container-sm">
-  <div class="row mt-6 -mx-2">
+  <div class="row mt-6">
     <div class="col-12 col-md-6 col-lg-6">
+      <!-- card course-->
       <div class="card ">
         <!-- title!-->
         <h1 class="text-xl leading-tight font-bold mt-2 mx-2">
@@ -13,17 +14,8 @@
          <!-- avatar data/!-->
         <div class="flex items-cente mt-4 ml-6">
           <img class="w-10 h-10 bg-gray-400 rounded-full">
-          <div class="text-sm ml-4">
-            <!-- Username/!-->
-            <p class="text-gray-900 leading-none capitalize font-bold">
-             <%= @course.author %>
-             <!-- course material-->
-						<span class="font-thin text-sm hover:bg-white hover:underline"> · Prof de
-						  <span class="capitalize"><%= @course.material.title %></span>
-						</span>
-
-            </p>
-          </div>
+          <!-- Course meta data-->
+          <%= render "courses/shared/course_data" %>
         </div>
 
         <!--content/!-->
@@ -32,28 +24,12 @@
             <%= @course.content.to_s.html_safe %>
           </p>
           <hr>
-          <p class="d-flex justify-content-end">
-            <%= link_to  edit_course_path(@course) do %>
-              <i class="fas fa-chalkboard-teacher"></i> Editer
-            <% end %>
-          </p>
+          <!-- Options-->
+          <%= render "courses/shared/options" %>
         </div>
-
-      </div>
-
-    </div>
-  <!-- Form Exercice -->
-    <div class="col-12 col-md-6 ">
-      <div id="exerciceForm">
-        <%= render "exercices/form" %>
-      </div>
-      <div class="my-2" id="ExerciceDisplay">
-       <%= render @course.exercices %>
-
       </div>
     </div>
-
-
+    <%= render "courses/shared/exercice" %>
   </div>
 </div>
 
