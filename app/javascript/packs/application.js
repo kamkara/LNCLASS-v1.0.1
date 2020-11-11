@@ -17,5 +17,6 @@
 
 console.log('Hello World from Webpacker')
 import "../css/application.css"
+import "dashoard.js"
 require("trix")
 require("@rails/actiontext")

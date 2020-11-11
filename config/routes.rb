@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'table/index'
+  get 'dashboard/index'
   resources :courses do
     resources :exercices, only: [:index, :new, :create]
   end

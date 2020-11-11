@@ -15,11 +15,17 @@
 
 @import "bootstrap";
 @import "rails_bootstrap_forms";
+// Navbar students
 @import "nav/navbar";
+@import "tablesclass/table";
+// Editor
 @import "action_text/actiontext";
 @import "trix/dist/trix";
-@import "tablesclass/table";
+// dashboard
+@import "dashboard/dashboard";
+// bootstrap date Picker
 @import "bootstrap-datepicker3";
+//fontawesome
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/solid';

@@ -4,17 +4,24 @@
      <title><%= title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- Custom links-->
     <%= render "layouts/shared/header/header_links" %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Custom css for Dashboard-->
+   <%= render "dashboard/shared/links/dashboard_css" %>
+
   </head>
 
-  <body class="md:bg-gray-200">
+  <body class="md:bg-gray-200 dashboard">
 
-  <%= render "table/nav/navbar" %>
+   <!-- dashboard Navbar-->
+    <%= render "dashboard/shared/nav/navbar" %>
   <%= yield %>
-  <%= render "layouts/shared/header/notices" %>
+    <%= render "layouts/shared/header/notices" %>
    <%= render "layouts/shared/footer/footer_links" %>
+   <!-- Custom js for dashboard-->
+   <%= render "dashboard/shared/links/dashboard_js" %>
   </body>
 </html>

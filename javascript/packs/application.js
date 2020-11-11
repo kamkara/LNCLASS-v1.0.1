@@ -24,6 +24,10 @@ import "@fortawesome/fontawesome-free/js/all";
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
+
+
+
+
 //= require rich_text/actiontext
 //= require trix/dist/trix
 //= require bootstrap-datepicker
