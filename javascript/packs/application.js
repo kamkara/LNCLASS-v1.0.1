@@ -20,7 +20,8 @@ import "../css/application.css"
 import "@fortawesome/fontawesome-free/js/all";
 
 
-//= require jquery3
+//= require jquery
+//= require jquery_ujs
 //= require popper
 //= require bootstrap
 //= require rich_text/actiontext

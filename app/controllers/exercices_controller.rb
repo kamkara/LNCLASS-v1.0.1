@@ -1,7 +1,23 @@
 class ExercicesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_course, only: [:new, :update, :edit, :create]
   before_action :set_exercice, only: [:show, :edit, :update, :destroy]
+  before_action :set_course
+
+  # POST /exercices
+  def create
+    @exercice         = @course.exercices.build(exercice_params)
+    @exercice.user_id=  current_user.id#track exercices creator unique
+    @exercice.author  = current_user.username,#author
+
+    respond_to do |format|
+      if @exercice.save
+       format.html {redirect_to @exercice}
+       format.js {}# render create.js
+      else
+       format.html {render :new}
+      end
+    end
+  end
 
   # GET /exercices
   def index
@@ -9,6 +25,7 @@ class ExercicesController < ApplicationController
   end
 
   # GET /exercices/1
+
   def show
   end
 
@@ -21,17 +38,6 @@ class ExercicesController < ApplicationController
   def edit
   end
 
-  # POST /exercices
-  def create
-    @exercice        = @course.exercices.build(exercice_params)
-    @exercice.author = current_user.username
-
-    if @exercice.save
-      redirect_to @exercice, notice: 'Exercice was successfully created.'
-    else
-      render :new
-    end
-  end
 
   # PATCH/PUT /exercices/1
   def update

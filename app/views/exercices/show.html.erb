@@ -1,39 +1,34 @@
-<p id="notice"><%= notice %></p>
+<% content_for @title= "Fiches Exercices" %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @exercice.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @exercice.content %>
-</p>
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 offset-md-1">
+    <div class="card">
+      <div class="m-2">
+      <!--  exerciece meta data-->
+      <div class="col-6">
+      <p class=" font-bold">
+      <p class="">
+        <%= @exercice.author %>
+      </p>
+      <p class="">
+        professeur  <%= @exercice.material %>
+      </p>
+      </p>
+      </div>
+       <hr class="h-14 bg-blue-600 mb-2">
+      <!--  exerciece title-->
+        <p class="font-semibold">
+          <%= @exercice.title %>
+        </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @exercice.author %>
-</p>
-
-<p>
-  <strong>Search:</strong>
-  <%= @exercice.search %>
-</p>
-
-<p>
-  <strong>Slug:</strong>
-  <%= @exercice.slug %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @exercice.user_id %>
-</p>
-
-<p>
-  <strong>Course:</strong>
-  <%= @exercice.course_id %>
-</p>
-
-<%= link_to 'Edit', edit_exercice_path(@exercice) %> |
-<%= link_to 'Back', exercices_path %>
+        <!--  exerciece content-->
+        <p>
+          <%= @exercice.content_exercice %>
+        </p>
+      </div>
+      </div>
+      <%= link_to 'Edit', edit_exercice_path(@exercice) %> |
+      <%= link_to "Telecharge la Fiche Pratique", root_path %>
+  </div>
+</div>
