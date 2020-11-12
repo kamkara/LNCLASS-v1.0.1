@@ -16,10 +16,12 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    render layout: "dashboard"
   end
 
   # GET /courses/1/edit
   def edit
+    render layout: "dashboard"
   end
 
   # POST /courses
@@ -30,8 +32,10 @@ class CoursesController < ApplicationController
 
     if @course.save
       redirect_to @course, notice: 'Course was successfully created.'
+      render layout: "dashboard"
     else
       render :new
+      render layout: "dashboard"
     end
   end
 
@@ -39,8 +43,11 @@ class CoursesController < ApplicationController
   def update
     if @course.update(course_params)
       redirect_to @course, notice: 'Course was successfully updated.'
+      render layout: "dashboard"
+
     else
       render :edit
+      render layout: "dashboard"
     end
   end
 
